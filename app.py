@@ -18,7 +18,7 @@ grapeClasses = ['Grape___Black_rot', 'Grape___Esca_(Black_Measles)', 'Grape___Le
 
 prediction_label = ''
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
 def samplePrediction(model,img,classes,height,width):
   resized = cv2.resize(img,(height,width))
   image_value = np.expand_dims(resized, axis=0)
