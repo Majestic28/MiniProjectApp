@@ -18,6 +18,7 @@ grapeClasses = ['Grape___Black_rot', 'Grape___Esca_(Black_Measles)', 'Grape___Le
 
 prediction_label = ''
 
+@st.cache(allow_output_mutation=True)
 def samplePrediction(model,img,classes,height,width):
   resized = cv2.resize(img,(height,width))
   image_value = np.expand_dims(resized, axis=0)
@@ -25,6 +26,7 @@ def samplePrediction(model,img,classes,height,width):
   prediction_label = classes[int(prediction_scores.argmax(axis=1))]
   st.write("Prediction: " + prediction_label)
 
+@st.cache(allow_output_mutation=True)
 def getefficientnet_v2_s_model(classes):  
   global height,width,batchSize
   height = 384
@@ -48,6 +50,7 @@ def getefficientnet_v2_s_model(classes):
 
   return model_name,model
 
+@st.cache(allow_output_mutation=True)
 def find_best_weight(model_name,dataset_name):
   rootdir = './trained_models_weight/'+model_name+'/'+dataset_name+'/'
   bestmodelWeight = os.listdir(rootdir)
@@ -82,6 +85,7 @@ def grapeloadModel():
 
 semanticSegmenter = semanticSegmenterOutput()
 
+@st.cache(allow_output_mutation=True)
 def loading():
     with st.spinner("Loading..."):
         time.sleep(1)
