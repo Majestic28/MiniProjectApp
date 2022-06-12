@@ -100,17 +100,14 @@ if project == "About":
         st.title("Contributors of the app..")
         
         st.header("1. Gokul R")
-        g1,g2 = st.columns([1,3])
-        g1.image("gokul_pic1.jpg")
-        g2.subheader("Gmail: gokulrajakalappan@gmail.com")
+        g1,g2 = st.columns([1,3])        
+        g1.subheader("Gmail: gokulrajakalappan@gmail.com")
         st.header("2. Vishnu Nandakumar")
-        v1,v2 = st.columns([1,3])
-        v1.image("vish1.jpg")
-        v2.subheader("Gmail: universalvishnu2001@gmail.com")
+        v1,v2 = st.columns([1,3])        
+        v1.subheader("Gmail: universalvishnu2001@gmail.com")
         st.header("3. Gowatam rao GS")
         gg1,gg2 = st.columns([1,3])
-        gg1.image("gow1.jpg")
-        gg2.subheader("Gmail: gowtam.rao@gmail.com")
+        gg1.subheader("Gmail: gowtam.rao@gmail.com")
 
 if project == "U^2Net_Output":
     loading()
