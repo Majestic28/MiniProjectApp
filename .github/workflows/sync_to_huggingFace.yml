@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://Amrrs:$HF_TOKEN@huggingface.co/spaces/gokulraja/Predictionapp
+        run: git push --force https://gokulraja:$HF_TOKEN@huggingface.co/spaces/gokulraja/Predictionapp
