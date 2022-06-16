@@ -18,3 +18,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: git push --force https://gokulraja:$HF_TOKEN@huggingface.co/spaces/gokulraja/Predictionapp
+        run: git config lfs.allowincompletepush true
