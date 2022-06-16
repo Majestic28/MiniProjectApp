@@ -11,11 +11,13 @@ jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          run: git config lfs.allowincompletepush true
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: git push --force https://gokulraja:$HF_TOKEN@huggingface.co/spaces/gokulraja/Predictionapp
-        run: git config lfs.allowincompletepush true
+    
